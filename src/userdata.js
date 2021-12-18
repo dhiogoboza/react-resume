@@ -55,5 +55,43 @@ export const userdata = {
       techs: ['PHP', 'CSS', 'HTML', 'JavaScript'],
       description: 'IT support and web systems with PHP.'
     }
+  ],
+  education: [
+    {
+      place: 'Federal University of Rio Grande do Norte',
+      title: 'Computer Engineering',
+      site: 'https://www.linkedin.com/school/ufrn/',
+      img: 'img/ufrn.jpg',
+      begin: 'Jan 2016',
+      current: true,
+      description: 'Web developement, parallel programming, artificial inteligence, computer architecture, microcontrollers, database, networks.'
+    },
+    {
+      place: 'Federal University of Rio Grande do Norte',
+      title: 'Science and Tecnology',
+      site: 'https://www.linkedin.com/school/ufrn/',
+      img: 'img/ufrn.jpg',
+      begin: 'Jan 2012',
+      end: 'Dec 2015',
+      description: 'Programming logic, C++.'
+    },
+    {
+      place: 'Federal University of Rio Grande do Norte',
+      title: 'Programming course',
+      site: 'https://www.linkedin.com/school/ufrn/',
+      img: 'img/ufrn.jpg',
+      begin: 'Jan 2010',
+      end: 'Dec 2011',
+      description: 'Programming logic, software development, Java, database.'
+    },
+    {
+      place: 'Federal Institute of Rio Grande do Norte',
+      title: 'Computer Technician',
+      site: 'https://www.linkedin.com/school/ifrn/',
+      img: 'img/ifrn.jpg',
+      begin: 'Jan 2008',
+      end: 'Dec 2011',
+      description: 'Programming logic, software development, database, .Net, Pascal, Delphi.'
+    }
   ]
 };

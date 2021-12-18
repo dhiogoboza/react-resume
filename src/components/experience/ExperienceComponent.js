@@ -14,13 +14,13 @@ class ExperienceComponent extends React.Component {
     }
 
     return result;
- }
+  }
 
   render() {
     return <div className="w3-container">
       <div className="w3-container no-padding-left">
         <div className="w3-col-auto w3-container no-padding-left">
-          <img src={ this.props.experience.company.img } alt="Basis Tecnologia da Informação"
+          <img src={ this.props.experience.company.img } alt={ this.props.experience.company.name }
             className="w3-round company-logo" />
         </div>
         <div className="col-right">

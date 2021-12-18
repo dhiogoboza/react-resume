@@ -1,4 +1,5 @@
 import { Experience } from "../models/Experience";
+import { Education } from "../models/Education";
 import { User } from "../models/User";
 import { userdata } from '../userdata.js';
 
@@ -16,5 +17,15 @@ export class DataProvider {
     }
 
     return experiences;
+  }
+
+  getEducation(): Education[] {
+    const educationArray: Education[] = [];
+
+    for (let education of userdata.education) {
+      educationArray.push(new Education(education));
+    }
+
+    return educationArray;
   }
 }
