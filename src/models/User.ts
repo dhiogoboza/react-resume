@@ -5,7 +5,7 @@ export class User {
   email: string;
   phoneNumber: string;
 
-  public constructor(init?:Partial<User>) {
+  public constructor(init?: Partial<User>) {
     Object.assign(this, init);
   }
 }
