@@ -6,6 +6,23 @@ export const userdata = {
     email: 'dhiogoboza@gmail.com',
     phoneNumber: '+55 84994061406'
   },
+  socialNetworks: [
+    {
+      name: 'GitHub',
+      link: 'https://github.com/dhiogoboza',
+      icon: 'fa-github'
+    },
+    {
+      name: 'Stack Overflow',
+      link: 'https://stackoverflow.com/users/5302003/dhiogo-boza',
+      icon: 'fa-stack-overflow'
+    },
+    {
+      name: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/dhiogoboza/',
+      icon: 'fa-linkedin'
+    }
+  ],
   experiences: [
     {
       role: 'Senior Web Developer',

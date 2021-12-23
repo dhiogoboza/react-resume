@@ -2,6 +2,7 @@ import { Experience } from "../models/Experience";
 import { Education } from "../models/Education";
 import { User } from "../models/User";
 import { userdata } from '../userdata.js';
+import { SocialNetwork } from "../models/SocialNetwork";
 
 export class DataProvider {
 
@@ -27,5 +28,15 @@ export class DataProvider {
     }
 
     return educationArray;
+  }
+
+  getSocialNetworks(): SocialNetwork[] {
+    const socialNetworksArray: SocialNetwork[] = [];
+
+    for (let socialNetwork of userdata.socialNetworks) {
+      socialNetworksArray.push(new SocialNetwork(socialNetwork));
+    }
+
+    return socialNetworksArray;
   }
 }
