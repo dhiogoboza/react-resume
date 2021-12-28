@@ -11,32 +11,20 @@ export class DataProvider {
   }
 
   getExperiences(): Experience[] {
-    const experiences: Experience[] = [];
-
-    for (let experience of userdata.experiences) {
-        experiences.push(new Experience(experience));
-    }
-
-    return experiences;
+    return userdata.experiences.map((el) => {
+      return new Experience(el)
+    });
   }
 
   getEducation(): Education[] {
-    const educationArray: Education[] = [];
-
-    for (let education of userdata.education) {
-      educationArray.push(new Education(education));
-    }
-
-    return educationArray;
+    return userdata.education.map((el) => {
+      return new Education(el)
+    });
   }
 
   getSocialNetworks(): SocialNetwork[] {
-    const socialNetworksArray: SocialNetwork[] = [];
-
-    for (let socialNetwork of userdata.socialNetworks) {
-      socialNetworksArray.push(new SocialNetwork(socialNetwork));
-    }
-
-    return socialNetworksArray;
+    return userdata.socialNetworks.map((el) => {
+      return new SocialNetwork(el)
+    });
   }
 }

@@ -10,16 +10,9 @@ class Footer extends React.Component {
   }
 
   socialNetworks = () => {
-    let result = [];
-    let socialNetworks = this.dataProvider.getSocialNetworks();
-    let index = 0;
-
-    for (let socialNetwork of socialNetworks) {
-      result.push(<SocialNetworkComponent socialNetwork={socialNetwork} key={index} />);
-      index++;
-    }
-
-    return result;
+    return this.dataProvider.getSocialNetworks().map((el, index) => {
+      return <SocialNetworkComponent socialNetwork={el} key={index} />;
+    });
   }
 
   render() {

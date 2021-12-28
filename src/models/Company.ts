@@ -5,5 +5,6 @@ export class Company {
 
   public constructor(init?: Partial<Company>) {
     Object.assign(this, init);
-  }}
+  }
+}
   

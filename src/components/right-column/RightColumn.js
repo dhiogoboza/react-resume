@@ -11,29 +11,15 @@ class RightColumn extends React.Component {
   }
 
   experiences = () => {
-    let result = [];
-    let exps = this.dataProvider.getExperiences();
-    let index = 0;
-
-    for (let exp of exps) {
-      result.push(<ExperienceComponent experience={exp} key={index} />);
-      index++;
-    }
-
-    return result;
+    return this.dataProvider.getExperiences().map((el, index) => {
+      return <ExperienceComponent experience={el} key={index} />;
+    });
   }
 
   education = () => {
-    let result = [];
-    let educs = this.dataProvider.getEducation();
-    let index = 0;
-
-    for (let education of educs) {
-      result.push(<EducationComponent education={education} key={index} />);
-      index++;
-    }
-
-    return result;
+    return this.dataProvider.getEducation().map((el, index) => {
+      return <EducationComponent education={el} key={index} />
+    });
   }
 
   render() {

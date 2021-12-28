@@ -57,7 +57,8 @@ class LeftColumn extends React.Component {
           </div>
           <br />
         </div>
-      </div><br />
+      </div>
+      <br />
     </div>
   };
 }
