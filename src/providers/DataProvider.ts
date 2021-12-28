@@ -3,6 +3,7 @@ import { Education } from "../models/Education";
 import { User } from "../models/User";
 import { userdata } from '../userdata.js';
 import { SocialNetwork } from "../models/SocialNetwork";
+import { Language } from "../models/Language";
 
 export class DataProvider {
 
@@ -25,6 +26,12 @@ export class DataProvider {
   getSocialNetworks(): SocialNetwork[] {
     return userdata.socialNetworks.map((el) => {
       return new SocialNetwork(el)
+    });
+  }
+
+  getLanguages(): Language[] {
+    return userdata.languages.map((el) => {
+      return new Language(el)
     });
   }
 }

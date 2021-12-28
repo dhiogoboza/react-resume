@@ -1,12 +1,19 @@
 import React from 'react';
 import './LeftColumn.scss';
 import { DataProvider } from '../../providers/DataProvider';
+import LanguageComponent from '../language/LanguageComponent';
 
 class LeftColumn extends React.Component {
   constructor(props) {
     super(props);
-    const dataProvider = new DataProvider();
-    this.userInfo = dataProvider.getUserInfo();
+    this.dataProvider = new DataProvider();
+    this.userInfo = this.dataProvider.getUserInfo();
+  }
+
+  languages = () => {
+    return this.dataProvider.getLanguages().map((el, index) => {
+      return <LanguageComponent language={el} key={index} />;
+    });
   }
 
   render() {
@@ -47,14 +54,7 @@ class LeftColumn extends React.Component {
           <br />
 
           <p className="w3-large"><b><i className="fa fa-globe fa-fw w3-margin-right"></i>Languages</b></p>
-          <p>Portuguese</p>
-          <div className="w3-light-grey w3-round-xlarge">
-            <div className="w3-round-xlarge w3-teal" style={{height: "24px", width: "100%"}}></div>
-          </div>
-          <p><a href="https://www.efset.org/cert/Tp1Hmm" target="_blank">English</a></p>
-          <div className="w3-light-grey w3-round-xlarge">
-            <div className="w3-round-xlarge w3-teal" style={{height:"24px", width: "67%"}}></div>
-          </div>
+          { this.languages() }
           <br />
         </div>
       </div>

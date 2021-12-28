@@ -6,6 +6,17 @@ export const userdata = {
     email: 'dhiogoboza@gmail.com',
     phoneNumber: '+55 84994061406'
   },
+  languages: [
+    {
+      name: 'Portuguese',
+      percentage: '100%'
+    },
+    {
+      name: 'English',
+      percentage: '67%',
+      certificate: 'https://www.efset.org/cert/Tp1Hmm'
+    }
+  ],
   socialNetworks: [
     {
       name: 'GitHub',
