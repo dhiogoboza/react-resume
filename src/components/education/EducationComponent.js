@@ -1,7 +1,12 @@
 import React from 'react'
+import WithSeparatorComponent from '../with-separator/WithSeparatorComponent';
 import './EducationComponent.scss';
 
-class EducationComponent extends React.Component {
+class EducationComponent extends WithSeparatorComponent {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return <div className="w3-container">
       <div className="w3-container no-padding-left">
@@ -23,7 +28,7 @@ class EducationComponent extends React.Component {
           <p>{ this.props.education.description }</p>
         </div>
       </div>
-      <hr />
+      { this.renderSeparator() }
     </div>
   }
 }

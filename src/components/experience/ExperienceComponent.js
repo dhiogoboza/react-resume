@@ -1,8 +1,13 @@
 import React from 'react'
 import './ExperienceComponent.scss';
 import { ColorUtilities } from '../../utilities/ColorUtilities';
+import WithSeparatorComponent from '../with-separator/WithSeparatorComponent';
 
-class ExperienceComponent extends React.Component {
+class ExperienceComponent extends WithSeparatorComponent {
+  constructor(props) {
+    super(props);
+  }
+
   techs = () => {
     let result = [];
     let techs = this.props.experience.techs;
@@ -41,7 +46,7 @@ class ExperienceComponent extends React.Component {
           <p>{ this.props.experience.description }</p>
         </div>
       </div>
-      <hr />
+      { this.renderSeparator() }
     </div>
   }
 }
