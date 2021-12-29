@@ -1,7 +1,7 @@
 import './App.css';
-import Footer from './components/footer/Footer'
-import LeftColumn from './components/left-column/LeftColumn'
-import RightColumn from './components/right-column/RightColumn'
+import Footer from './components/footer/Footer';
+import LeftColumn from './components/left-column/LeftColumn';
+import RightColumn from './components/right-column/RightColumn';
 
 function App() {
   return (

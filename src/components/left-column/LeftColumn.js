@@ -1,5 +1,6 @@
 import React from 'react';
 import './LeftColumn.scss';
+import { Helmet } from "react-helmet";
 import { DataProvider } from '../../providers/DataProvider';
 import LanguageComponent from '../language/LanguageComponent';
 
@@ -18,6 +19,10 @@ class LeftColumn extends React.Component {
 
   render() {
     return <div className="w3-quarter">
+      <Helmet>
+          <title>{ this.userInfo.name }</title>
+      </Helmet>
+
       <div className="w3-card-4 w3-theme-l1">
         <div className="w3-display-container">
           <img src="img/perfil.jpeg" style={{width:"100%"}} alt="Avatar" />
